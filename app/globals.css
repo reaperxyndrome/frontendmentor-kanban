@@ -8,6 +8,14 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* height: auto; */
+  /* width: auto; */
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
