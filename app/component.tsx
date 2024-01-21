@@ -2,6 +2,7 @@ import { twMerge } from "tailwind-merge"
 import { typography } from "./typography"
 import IconCheck from "@/public/icon-check.svg"
 import Image from "next/image"
+import { useState } from "react"
 // import { Input } from "postcss"
 
 interface Extendable {
@@ -19,7 +20,8 @@ interface InputProps extends LabelProps {
 
 interface TextFieldProps extends InputProps {
     placeholder: string,
-    required: boolean
+    required: boolean,
+    isSubmitted: boolean
 }
 
 
@@ -77,11 +79,18 @@ export const SubtaskCheckbox:React.FC<InputProps> = ({label, className="", id}) 
     )
 }
 
-export const TextField:React.FC<TextFieldProps> = ({label, className="", id, placeholder, required}) => {
+// TODO: add error message when required field is empty and submitted
+// TODO: add state to check if field is filled
+// TODO: fix "use client"
+// TODO: refactor components into a separate folder
+export const TextField:React.FC<TextFieldProps> = ({label, className="", id, placeholder, required, isSubmitted}) => {
+    // const [isFilled, setIsFilled] = useState(false)
+
     return(
-        <div className={twMerge("flex flex-col", className)}>
+        <div className={twMerge("relative flex flex-col", className)}>
             <label htmlFor={id} className={`${typography.heading_S} text-medium_grey mb-2`}>{label}</label>
-            <input type="text" id={id} placeholder={placeholder} className={`${typography.body_L} border bg-opacity-0 bg-[white] border-medium_grey border-op focus:outline-none rounded-md px-4 py-2 placeholder:text-[white]/25`} required={required}></input>
+            <input type="text" id={id} placeholder={placeholder} className={`${typography.body_L} border bg-opacity-0 bg-[white] border-medium_grey focus:outline-none rounded-md px-4 py-2 placeholder:text-[white]/25 ${(required && isSubmitted) ? "border-red": ''}`} required={required}></input>
+            <span className={`${typography.body_L} absolute bottom-2 right-4 text-red`}>Can&apos;t be empty</span>
         </div>
     )
 

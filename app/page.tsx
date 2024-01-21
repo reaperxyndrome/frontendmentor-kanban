@@ -28,7 +28,7 @@ export default function Home() {
       </section>
       <section className='flex flex-col'>
         <h1 className='mb-4'>Text Field</h1>
-        <TextField label='Text Field' id='check' placeholder='Enter task name' required></TextField>
+        <TextField label='Text Field' id='check' placeholder='Enter task name' required isSubmitted></TextField>
       </section>
       {/* <ButtonPrimaryLarge text={'hello there'} ></ButtonPrimaryLarge> */}
       {/* <ButtonPrimaryLarge text={'hello there'} ></ButtonPrimaryLarge> */}
