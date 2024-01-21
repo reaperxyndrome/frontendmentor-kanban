@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge"
-import { typography } from "./typography"
+import { typography } from "../typography"
 import IconCheck from "@/public/icon-check.svg"
 import Image from "next/image"
 import { useState } from "react"

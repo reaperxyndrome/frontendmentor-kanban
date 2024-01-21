@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ButtonDestructive, ButtonPrimaryLarge, ButtonPrimarySmall, ButtonSecondaryDark, ButtonSecondaryLight, SubtaskCheckbox, TextField } from './component'
+import { ButtonDestructive, ButtonPrimaryLarge, ButtonPrimarySmall, ButtonSecondaryDark, ButtonSecondaryLight, SubtaskCheckbox, TextField } from './component/component'
 
 export default function Home() {
   return (
