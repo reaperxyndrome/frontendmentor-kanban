@@ -4,28 +4,7 @@ import IconCheck from "@/public/icon-check.svg"
 import Image from "next/image"
 import { useState } from "react"
 // import { Input } from "postcss"
-
-interface Extendable {
-    // text: string,
-    className?: string
-}
-
-interface LabelProps extends Extendable{
-    label: string
-}
-
-interface InputProps extends LabelProps {
-    id: string
-}
-
-interface TextFieldProps extends InputProps {
-    placeholder: string,
-    required: boolean,
-    isSubmitted: boolean
-}
-
-
-
+import { Extendable, LabelProps, InputProps, TextFieldProps } from "../interface"
 
 const Button:React.FC<LabelProps> = ({label, className=""}) => {
     return(
