@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { ButtonDestructive, ButtonPrimaryLarge, ButtonPrimarySmall, ButtonSecondaryDark, ButtonSecondaryLight, SubtaskCheckbox } from './component'
+import { ButtonDestructive, ButtonPrimaryLarge, ButtonPrimarySmall, ButtonSecondaryDark, ButtonSecondaryLight, SubtaskCheckbox, TextField } from './component'
 
 export default function Home() {
   return (
@@ -24,8 +24,11 @@ export default function Home() {
       </section>
       <section className='flex flex-col'>
         <h1 className='mb-4'>Subtask Checkbox</h1>
-        <SubtaskCheckbox></SubtaskCheckbox>
-      
+        <SubtaskCheckbox text='checkbox' id='check'></SubtaskCheckbox>
+      </section>
+      <section className='flex flex-col'>
+        <h1 className='mb-4'>Text Field</h1>
+        <TextField text='Text Field' id='check'></TextField>
       </section>
       {/* <ButtonPrimaryLarge text={'hello there'} ></ButtonPrimaryLarge> */}
       {/* <ButtonPrimaryLarge text={'hello there'} ></ButtonPrimaryLarge> */}
