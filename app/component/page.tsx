@@ -1,9 +1,8 @@
-import Image from 'next/image'
 import { Checkbox } from './Checkbox'
 import { TextField } from './TextField'
 import { ButtonDestructive, ButtonPrimaryLarge, ButtonPrimarySmall, ButtonSecondaryDark, ButtonSecondaryLight } from './Button'
 
-export default function Home() {
+export default function ComponentPage() {
   return (
     <main className="flex flex-col gap-y-8">
       <section className='flex flex-col'>
