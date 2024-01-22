@@ -10,7 +10,7 @@ import Dropdown from './Dropdown'
 
 export default function ComponentPage() {
   return (
-    <main className="flex flex-col gap-y-8 dark:bg-dark_grey p-8">
+    <main className="flex flex-col gap-y-8 p-8">
       <h1 className='dark:text-[white] text-3xl self-center'>Components</h1>
       <section className="flex flex-col">
         <h2 className='dark:text-[white]'>Buttons</h2>
@@ -45,7 +45,7 @@ export default function ComponentPage() {
       </section>
       <section className="flex flex-col">
         <h2 className="mb-4 dark:text-[white]">Dropdown</h2>
-        <Dropdown options={["hello", "there"]} id={''} label={''}></Dropdown>
+        <Dropdown options={["hello", "there"]} id={''} label={'hello'}></Dropdown>
       </section>
     </main>
   )
