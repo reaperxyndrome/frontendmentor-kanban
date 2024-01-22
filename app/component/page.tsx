@@ -6,6 +6,7 @@ import {
   ButtonPrimarySmall,
   ButtonSecondary,
 } from './Button'
+import Dropdown from './Dropdown'
 
 export default function ComponentPage() {
   return (
@@ -41,6 +42,10 @@ export default function ComponentPage() {
           required
           isSubmitted
         ></TextField>
+      </section>
+      <section className="flex flex-col">
+        <h2 className="mb-4 dark:text-[white]">Dropdown</h2>
+        <Dropdown options={["hello", "there"]} id={''} label={''}></Dropdown>
       </section>
     </main>
   )

@@ -16,3 +16,7 @@ export interface TextFieldProps extends InputProps {
   required: boolean
   isSubmitted: boolean
 }
+
+export interface SelectProps extends InputProps {
+  options: Array<string>
+}
