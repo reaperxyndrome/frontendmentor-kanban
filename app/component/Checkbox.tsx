@@ -16,6 +16,3 @@ export const Checkbox:React.FC<InputProps> = ({label, className="", id}) => {
     )
 }
 
-// TODO: add error message when required field is empty and submitted
-// TODO: fix "use client"
-

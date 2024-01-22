@@ -1,9 +1,12 @@
+"use client"
 import { twMerge } from "tailwind-merge"
 import { TextFieldProps } from "../interface"
 import { typography } from "../typography"
+import { useState } from "react"
 
+// TODO: add error message when required field is empty and submitted
 export const TextField:React.FC<TextFieldProps> = ({label, className="", id, placeholder, required, isSubmitted}) => {
-    // const [isFilled, setIsFilled] = useState(false)
+    const [isFilled, setIsFilled] = useState(false)
 
     return(
         <div className={twMerge("relative flex flex-col", className)}>
