@@ -6,22 +6,15 @@ import Image from "next/image";
 
 const Dropdown:React.FC<SelectProps> = ({label, className, id, options}) => {
   return (
-    <div className={twMerge("flex flex-col ", className)}>
-      <label
-        htmlFor={id}
-        className={`${typography.heading_S} text-medium_grey dark:text-[white] mb-2`}
-      >
-        {label}
-      </label>
-      <div className="relative h-10">
-        <select className={`${typography.body_L} appearance-none px-4 w-full h-full rounded-md dark:bg-[black] dark:bg-opacity-0 dark:text-[white] border border-light_grey hover:border-main_purple`}>
-          {options.map((option, index) => {
-            return <option key={index} className={`${typography.body_L} dark:bg-opacity-0 dark:bg-[black] appearance-none`}>{option}</option>
-          })}
-        </select>
-        <Image src={IconChevronDown} height={12} width={12} className="absolute top-1/2 -translate-y-1/2 right-4" alt=""></Image>
+    <div className="dark:text-[white]">
+      <p>{label}</p>
+      <div tabIndex={0} className="flex items-center px-4 relative border border-medium_grey focus:border-main_purple h-10 rounded-md cursor-pointer">
+        <span>Value</span>
+        <ul className="flex flex-col p-4 gap-y-2 absolute bg-very_dark_grey top-12 left-0 w-full rounded-lg">
+          <li className="text-medium_grey">hello there</li>
+          <li>hey there</li>
+        </ul>
       </div>
-      
     </div>
   )
 }
