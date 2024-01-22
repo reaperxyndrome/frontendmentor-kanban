@@ -12,14 +12,14 @@ export const Checkbox: React.FC<InputProps> = ({
   return (
     <div
       className={twMerge(
-        'p-3 bg-very_dark_grey rounded-md hover:bg-main_purple cursor-pointer',
+        'p-3 dark:bg-very_dark_grey bg-light_grey rounded-md dark:text-[white] hover:bg-main_purple hover:bg-opacity-25 cursor-pointer',
         className
       )}
     >
       <div className="flex items-center relative p-0">
         <input
           type="checkbox"
-          className="peer h-[1rem] w-[1rem] bg-dark_grey appearance-none peer-checked:bg-main_purple cursor-pointer rounded-sm"
+          className="peer h-[1rem] w-[1rem] dark:bg-dark_grey bg-[white] border border-medium_grey border-opacity-25 appearance-none checked:bg-main_purple cursor-pointer rounded-sm"
           id={id}
         />
         <Image

@@ -55,7 +55,7 @@ export const ButtonSecondary: React.FC<LabelProps> = ({
     <Button
       label={label}
       className={twMerge(
-        `${typography.button_S} text-main_purple bg-main_purple bg-opacity-20 hover:bg-opacity-60 py-2`,
+        `${typography.button_S} text-main_purple bg-main_purple dark:bg-[white] dark:hover:bg-[white] bg-opacity-10 hover:bg-opacity-60 py-2`,
         className
       )}
     ></Button>

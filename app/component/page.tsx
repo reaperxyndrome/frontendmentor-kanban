@@ -9,9 +9,10 @@ import {
 
 export default function ComponentPage() {
   return (
-    <main className="flex flex-col gap-y-8">
+    <main className="flex flex-col gap-y-8 dark:bg-dark_grey p-8">
+      <h1 className='dark:text-[white] text-3xl self-center'>Components</h1>
       <section className="flex flex-col">
-        <h1>Buttons</h1>
+        <h2 className='dark:text-[white]'>Buttons</h2>
         <section className="flex flex-wrap gap-3 pt-3">
           <div>
             <ButtonPrimaryLarge
@@ -28,11 +29,11 @@ export default function ComponentPage() {
         </section>
       </section>
       <section className="flex flex-col">
-        <h1 className="mb-4">Subtask Checkbox</h1>
-        <Checkbox label="checkbox" id="check"></Checkbox>
+        <h2 className="mb-4 dark:text-[white]">Subtask Checkbox</h2>
+        <Checkbox label="Checkbox" id="check"></Checkbox>
       </section>
       <section className="flex flex-col">
-        <h1 className="mb-4">Text Field</h1>
+        <h2 className="mb-4 dark:text-[white]">Text Field</h2>
         <TextField
           label="Text Field"
           id="check"

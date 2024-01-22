@@ -22,7 +22,7 @@ export const TextField: React.FC<TextFieldProps> = ({
     <div className={twMerge('relative flex flex-col', className)}>
       <label
         htmlFor={id}
-        className={`${typography.heading_S} text-[white] mb-2`}
+        className={`${typography.heading_S} text-medium_grey dark:text-[white] mb-2`}
       >
         {label}
       </label>
@@ -31,7 +31,7 @@ export const TextField: React.FC<TextFieldProps> = ({
         onChange={handleInputChange}
         id={id}
         placeholder={placeholder}
-        className={`${typography.body_L} border bg-opacity-0 bg-[white] border-medium_grey focus:outline-none rounded-md px-4 py-2 placeholder:text-[white]/25 ${required && isSubmitted && !isFilled ? 'border-red' : ''}`}
+        className={`${typography.body_L} border bg-opacity-0 bg-[white] border-medium_grey focus:outline-none rounded-md px-4 py-2 placeholder:text-[black]/25 dark:placeholder:text-[white]/25 dark:text-[white] ${required && isSubmitted && !isFilled ? 'border-red' : ''}`}
         required={required}
       ></input>
       {required && !isFilled && isSubmitted && (
