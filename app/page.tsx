@@ -1,7 +1,3 @@
 export default function Home() {
-  return (
-    <main className="flex flex-col gap-y-8">
-      Home Page
-    </main>
-  )
+  return <main className="flex flex-col gap-y-8">Home Page</main>
 }
