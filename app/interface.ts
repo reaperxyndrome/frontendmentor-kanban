@@ -17,6 +17,13 @@ export interface TextFieldProps extends InputProps {
   isSubmitted: boolean
 }
 
+export interface SelectOption {
+  label: string,
+  value: string
+}
+
 export interface SelectProps extends InputProps {
-  options: Array<string>
+  options: Array<SelectOption>,
+  value: SelectOption
+  onChange: (value: SelectOption) => void
 }
