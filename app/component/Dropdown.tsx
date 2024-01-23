@@ -15,6 +15,10 @@ const Dropdown:React.FC<SelectProps> = ({label, value, className, id, options, o
     console.log(isOpen)
   }
 
+  function handleBlurClose(){
+    setIsOpen(false)
+  }
+
   function SelectOption(option: SelectOption){
     setIsOpen(false)
     if (option != value) onChange(option)
@@ -23,15 +27,20 @@ const Dropdown:React.FC<SelectProps> = ({label, value, className, id, options, o
   return (
     <div className="dark:text-[white]">
       <p className={`${typography.body_M} mb-2`}>{label}</p>
-      <div tabIndex={0} className="flex items-center px-4 relative border border-medium_grey border-opacity-25 focus:border-main_purple h-10 rounded-md cursor-pointer" onClick={handleOpen}>
-        <span className={`${typography.body_L}`}>Value</span>
+      <div tabIndex={0} className="flex items-center px-4 relative border border-medium_grey border-opacity-25 focus:border-main_purple h-10 rounded-md cursor-pointer" onClick={handleOpen} onBlur={handleBlurClose}>
+        <span className={`${typography.body_L}`}>{value.value}</span>
         <Image src={IconChevronDown} alt="Dropdown Icon" width={12} height={12} className="absolute right-4">
         </Image>
         {
           isOpen &&
-          <ul className="flex flex-col p-4 gap-y-2 absolute bg-very_dark_grey top-12 left-0 w-full rounded-lg">
+          <ul className="flex flex-col py-4 absolute bg-very_dark_grey top-12 left-0 w-full rounded-lg z-10">
           {options.map((option, index) => (
-            <li key={option.value + index} className={`${typography.body_L} text-medium_grey`} onClick={e => SelectOption(option)}>
+            <li key={option.value + index} className={`${typography.body_L} text-medium_grey hover:bg-main_purple hover:text-[white] pl-4 py-1`} onClick={e => {
+              e.stopPropagation()
+              SelectOption(option)
+
+              }
+            }>
               {option.label}
             </li>
           ))}
