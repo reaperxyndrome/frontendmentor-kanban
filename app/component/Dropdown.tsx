@@ -33,9 +33,9 @@ const Dropdown:React.FC<SelectProps> = ({label, value, className, id, options, o
         </Image>
         {
           isOpen &&
-          <ul className="flex flex-col py-4 absolute bg-very_dark_grey top-12 left-0 w-full rounded-lg z-10">
+          <ul className="flex flex-col py-4 absolute dark:bg-very_dark_grey bg-[white] top-12 left-0 w-full rounded-lg z-10">
           {options.map((option, index) => (
-            <li key={option.value + index} className={`${typography.body_L} text-medium_grey hover:bg-main_purple hover:text-[white] pl-4 py-1`} onClick={e => {
+            <li key={option.value + index} className={`${typography.body_L} text-medium_grey dark:hover:bg-main_purple hover:bg-main_purple_hover hover:text-[white] pl-4 py-1`} onClick={e => {
               e.stopPropagation()
               SelectOption(option)
 
