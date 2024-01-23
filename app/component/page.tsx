@@ -7,7 +7,10 @@ import {
   ButtonSecondary,
 } from './Button'
 import Dropdown from './Dropdown'
+import Dropdowns from './Dropdowns'
 
+// TODO: refactor Dropdown to Dropdowns and mark it as client component
+// TODO: fix type error in Dropdown
 export default function ComponentPage() {
   return (
     <main className="flex flex-col gap-y-8 p-8">
@@ -44,8 +47,9 @@ export default function ComponentPage() {
         ></TextField>
       </section>
       <section className="flex flex-col">
-        <h2 className="mb-4 dark:text-[white]">Dropdown</h2>
-        <Dropdown options={["hello", "there"]} id={''} label={'hello'}></Dropdown>
+        <h2 className="mb-4 dark:text-[white]">Dropdowns</h2>
+        {/* <Dropdown options={options} id={''} label={'Dropdown (Active)'} value={options[0]}></Dropdown> */}
+        <Dropdowns></Dropdowns>
       </section>
     </main>
   )
