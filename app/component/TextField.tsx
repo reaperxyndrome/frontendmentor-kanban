@@ -4,7 +4,6 @@ import { TextFieldProps } from '../interface'
 import { typography } from '../typography'
 import { useState } from 'react'
 
-// TODO: add error message when required field is empty and submitted
 export const TextField: React.FC<TextFieldProps> = ({
   label,
   className = '',
