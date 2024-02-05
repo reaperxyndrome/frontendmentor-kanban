@@ -2,7 +2,7 @@ import { LabelProps } from '../interface'
 import { twMerge } from 'tailwind-merge'
 import { typography } from '../typography'
 
-const Button: React.FC<LabelProps> = ({ label, className = '' }) => {
+export const Button: React.FC<LabelProps> = ({ label, className = '' }) => {
   return (
     <button
       className={twMerge(
