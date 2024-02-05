@@ -12,7 +12,7 @@ export interface InputProps extends LabelProps {
 }
 
 export interface TextFieldProps extends InputProps {
-  placeholder: string
+  placeholder?: string
   required: boolean
   isSubmitted: boolean
 }
