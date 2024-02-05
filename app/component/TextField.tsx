@@ -5,10 +5,10 @@ import { typography } from '../typography'
 import { useState } from 'react'
 
 export const TextField: React.FC<TextFieldProps> = ({
-  label,
+  label = "task",
   className = '',
   id,
-  placeholder,
+  placeholder = "Add task",
   required,
   isSubmitted,
 }) => {
@@ -20,12 +20,14 @@ export const TextField: React.FC<TextFieldProps> = ({
   return (
     <div className={twMerge('relative flex flex-col', className)}>
       <label
+        data-testid="label"
         htmlFor={id}
         className={`${typography.heading_S} text-medium_grey dark:text-[white] mb-2`}
       >
         {label}
       </label>
       <input
+        data-testid="input"
         type="text"
         onChange={handleInputChange}
         id={id}
